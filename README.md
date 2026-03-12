@@ -1,31 +1,57 @@
-# AI-Driven Code Reviewer 🚀
+# 🚀 NeuralCompile: AI-Driven Code Intelligence Engine
 
-An automated code review system developed as part of the **Infosys Springboard Internship**. This tool helps developers and students identify code smells, unused dependencies, and provides AI-powered suggestions to improve code quality.
-
-## 📌 Project Overview
-The **AI-Driven Code Reviewer** leverages Python's Abstract Syntax Tree (AST) for deep static analysis and integrates with Large Language Models (LLMs) via Groq to provide real-time feedback.
+An advanced multi-language code analysis and execution platform developed during the **Infosys Springboard Internship**. It integrates static analysis with Large Language Models (LLMs) to provide real-time debugging, optimization, and structural visualization.
 
 ---
 
-## ✨ Key Features (Milestone 1)
-* **Static Code Analysis:** Automatically detects **unused imports** and **unused variables** to keep the codebase clean.
-* **AI Technical Review:** Uses the `llama-3.1-8b-instant` model on **Groq** to provide 2-line professional feedback on code logic.
-* **FastAPI Integration:** Offers a robust and fast API endpoint for code analysis.
-* **Security First:** Implements environment variable management for API keys using `python-dotenv`.
+## 📌 Project Overview
+**NeuralCompile** streamlines the developer workflow by combining deep **AST (Abstract Syntax Tree)** analysis with high-speed AI inference. It doesn't just find bugs; it visualizes the logic and persists execution history for better developer productivity.
+
+## ✨ Key Features
+
+### 🧠 1. AI-Powered Debugging & Review
+* **Static Analysis:** Uses Python’s `ast` module to detect unused variables, imports, and PEP8 compliance issues.
+* **LLM Orchestration:** Powered by **LangChain** and **Groq API** (`llama-3.1-8b`) for ultra-low latency logic suggestions (<500ms).
+* **Semantic Review:** Goes beyond syntax to identify logical flaws and provide professional-grade code refactoring.
+
+### 📊 2. Logic & Flow Visualization
+* **Dynamic CFG:** Automatically generates **Control Flow Graphs** to visualize complex loops and conditional execution paths.
+* **Algorithm Visualizer:** Provides step-by-step logic transparency for DSA-based code snippets.
+
+### 💾 3. Data Persistence & Performance
+* **Synchronized History:** Uses **SQLite** to store chat history and the latest **10 code execution logs**.
+* **State Management:** Built with **Reflex**, ensuring a reactive full-stack experience entirely in Python.
+* **Optimized Inference:** Leverages **Groq**'s LPU for near-instantaneous generative AI feedback.
 
 ---
 
 ## 🛠️ Tech Stack
-* **Language:** Python 3.x
-* **Backend:** [FastAPI](https://fastapi.tiangolo.com/)
-* **AI Engine:** [Groq Cloud API](https://console.groq.com/) (Llama 3.1)
-* **Logic:** `ast` (Abstract Syntax Trees)
+| Component | Technology |
+| :--- | :--- |
+| **Language** | Python 3.10+ |
+| **Frontend/Backend** | Reflex (Full-stack Python Framework) |
+| **AI Orchestration** | LangChain |
+| **LLM Inference** | Groq Cloud API (Llama 3.1) |
+| **Database** | SQLite |
+| **Core Logic** | AST, PyTorch (Evaluation) |
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Clone the repository
+### 1. Prerequisites
+- Python 3.10 or higher
+- Groq API Key
+
+### 2. Installation
 ```bash
-git clone [https://github.com/naveen-rondla-2005/AI-Code-Reviewer.git](https://github.com/naveen-rondla-2005/AI-Code-Reviewer.git)
-cd AI-Code-Reviewer
+# Clone the repository
+git clone [https://github.com/naveen-rondla-2005/NeuralCompile.git](https://github.com/naveen-rondla-2005/NeuralCompile.git)
+cd NeuralCompile
+
+# Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
